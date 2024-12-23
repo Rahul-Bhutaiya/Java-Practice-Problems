@@ -1,4 +1,4 @@
-package Assignment1;
+package Array_Assignment1;
 
 public class PrintNthElementFromLastOfArray {
     public static void main(String[] args) {
