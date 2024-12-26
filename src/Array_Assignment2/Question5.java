@@ -9,9 +9,8 @@ public class Question5 {
             if(currentNum>arr[i]){
                 System.out.println("false");
                 return;
-            }else{
-                currentNum=arr[i];
             }
+            currentNum=arr[i];
         }
         System.out.println("true");
     }
