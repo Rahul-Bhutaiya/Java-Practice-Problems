@@ -7,7 +7,8 @@ public class DoBinarySearchToCheckThatGivenNumerIsPresentInArrayOrNot {
         int left=0;
         int right=arr.length-1;
         while(left<=right){
-            int middle=(left+right)/2;
+//            int middle=(left+right)/2;
+            int middle = left+((right-left)/2);
             if(arr[middle]==k){
                 System.out.println("Present");
                 return;
