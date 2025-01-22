@@ -1,4 +1,4 @@
-package Array_Problem_Of_Pairing;
+package Array_Questions.Array_Problem_Of_Pairing;
 
 public class Solution2_Using_Binary_Search {
     public static void main(String[] args) {

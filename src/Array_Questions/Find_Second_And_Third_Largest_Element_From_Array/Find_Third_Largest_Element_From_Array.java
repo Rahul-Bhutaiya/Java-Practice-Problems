@@ -1,4 +1,4 @@
-package Array_Questions_With_Sorting;
+package Array_Questions.Find_Second_And_Third_Largest_Element_From_Array;
 
 public class Find_Third_Largest_Element_From_Array {
     public static void main(String[] args) {
