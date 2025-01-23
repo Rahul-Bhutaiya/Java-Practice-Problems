@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Using_Two_Pointer_Method {
     public static void main(String[] args) {
         int[] arr={10,21,23,26,33,50,60,47};
+//        int[] arr={1,3,5,2,4,6};
         int left=0;
         int right=arr.length-1;
 
@@ -12,10 +13,10 @@ public class Using_Two_Pointer_Method {
             if(arr[left]%2==1){
                 left++;
             }
-            if(arr[right]%2==0){
+            else if(arr[right]%2==0){
                 right--;
             }
-            if(arr[left]%2==0 && arr[right]%2==1){
+            else if(arr[left]%2==0 && arr[right]%2==1){
                 int temp=arr[left];
                 arr[left]=arr[right];
                 arr[right]=temp;
