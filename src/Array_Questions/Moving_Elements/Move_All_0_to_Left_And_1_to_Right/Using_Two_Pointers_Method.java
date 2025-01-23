@@ -4,7 +4,8 @@ import java.util.Arrays;
 
 public class Using_Two_Pointers_Method {
     public static void main(String[] args) {
-        int[] arr={1,0,0,1,0,0,1,0,0,1,1,1};
+//        int[] arr={1,0,0,1,0,0,1,0,0,1,1,1};
+        int[] arr={0,0,0,1,1,1};
         int left=0;
         int right=arr.length-1;
 
@@ -12,10 +13,10 @@ public class Using_Two_Pointers_Method {
             if(arr[left]==0){
                 left++;
             }
-            if(arr[right]==1){
+            else if(arr[right]==1){
                 right--;
             }
-            if(arr[left]==1 && arr[right]==0){
+            else if(arr[left]==1 && arr[right]==0){
                 arr[left]=0;
                 left++;
                 arr[right]=1;
