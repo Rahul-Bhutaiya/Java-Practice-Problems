@@ -15,7 +15,7 @@ public class Q2_ArrayMethod_On_Sorted_Array {
 //        update(arr,30,8,index);
 //        index = delete(arr,10,index);
 //        print(arr,index);
-//        System.out.println(search(arr,-5,index));
+//        System.out.println(search(arr,45,index));
 //        System.out.println(size(index));
 //        System.out.println(isEmpty(index));
 
@@ -100,9 +100,18 @@ public class Q2_ArrayMethod_On_Sorted_Array {
     }
 
     private static boolean search(int[] arr,int sValue,int index){
-        for(int i=0;i<index;i++){
-            if(arr[i]==sValue){
+        int left=0;
+        int right=arr.length-1;
+        while(left<=right){
+            int mid=left+(right-left)/2;
+            if(arr[mid]==sValue){
                 return true;
+            }
+            else if(arr[mid]<sValue){
+                left=mid+1;
+            }
+            else{
+                right=mid-1;
             }
         }
         return false;
