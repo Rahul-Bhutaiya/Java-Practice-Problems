@@ -8,7 +8,6 @@ public class Solution3_Using_Bottom_Left_Pointer {
         int colPointer=0;
 
         while (rowPointer>=0 && colPointer<arr[0].length){
-            System.out.println("rp");
             if(target==arr[rowPointer][colPointer]){
                 System.out.println("Present");
                 return;

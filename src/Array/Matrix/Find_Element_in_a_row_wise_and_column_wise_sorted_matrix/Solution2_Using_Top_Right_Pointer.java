@@ -8,7 +8,6 @@ public class Solution2_Using_Top_Right_Pointer {
         int target=20;
 
         while (rowPointer<arr.length && columnPointer>=0){
-            System.out.println("rp");
             if(target == arr[rowPointer][columnPointer]){
                 System.out.println("Present");
                 return;
