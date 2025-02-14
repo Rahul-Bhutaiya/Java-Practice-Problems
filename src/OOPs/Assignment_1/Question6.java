@@ -15,9 +15,11 @@ public class Question6 {
                 new Movie("Drona","Dharma Production","1 star"),
         };
 
-        Movie[] topMovieList=new Movie[movieList.length];
-        topMovieList=get5StarMovies(movieList);
-        displayTopMoviesDetails(topMovieList);
+//        Movie[] topMovieList=get5StarMovies(movieList);
+//        displayTopMoviesDetails(topMovieList);
+
+        Movie[] topMovieList = get5starMovies2(movieList);
+        displayTopMoviesDetails2(topMovieList);
 
     }
     public static void displayTopMoviesDetails(Movie[] topMovieList){
@@ -30,12 +32,36 @@ public class Question6 {
         }
     }
 
+    public static void displayTopMoviesDetails2(Movie[] topMovieList){
+        for(Movie eachMovie:topMovieList){
+            eachMovie.displayMovieDetails();
+            System.out.println();
+        }
+    }
+
+    public static Movie[] get5starMovies2(Movie[] movieList){
+        int movieCount = 0;
+        for (Movie eachMovie:movieList){
+            if(eachMovie.getMovieRating().equals("5 star")){
+                movieCount++;
+            }
+        }
+        Movie[] topMovies=new Movie[movieCount];
+        for (Movie eachMovie:movieList){
+            if(eachMovie.getMovieRating().equals("5 star")){
+                topMovies[topMovies.length-movieCount]=eachMovie;
+                movieCount--;
+            }
+        }
+        return topMovies;
+    }
+
     public static Movie[] get5StarMovies(Movie[] movieList){
         Movie[] topMovieList=new Movie[movieList.length];
         int index=0;
 
         for(int i=0;i<movieList.length;i++){
-            if(movieList[i].getMovieRating()=="5 star"){
+            if(movieList[i].getMovieRating().equals("5 star")){
                 topMovieList[index]=movieList[i];
                 index++;
             }

@@ -15,19 +15,19 @@ public class Question5 {
                 new Holiday("Engineers' Day", 15, "September")
         };
 
-//        System.out.println(inSameMonth(holidayList[8],holidayList[9]));
+        System.out.println(inSameMonth(holidayList[7],holidayList[9]));
 
-        System.out.println(avgDate(holidayList));
-
-
+//        System.out.println(avgDate(holidayList));
     }
 
     public static boolean inSameMonth(Holiday holiday1, Holiday holiday2){
-        if(holiday1.getMonth()==holiday2.getMonth()){
-            return true;
-        }else {
-            return false;
-        }
+//        if(holiday1.getMonth().equals(holiday2.getMonth())){
+//            return true;
+//        }else {
+//            return false;
+//        }
+
+        return holiday1.getMonth().equals(holiday2.getMonth());
     }
 
     public static double avgDate(Holiday[] holidayList){
