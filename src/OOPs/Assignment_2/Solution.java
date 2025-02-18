@@ -3,6 +3,9 @@ package OOPs.Assignment_2;
 import java.util.Scanner;
 
 public class Solution {
+    static {
+        System.out.println("hello rp");
+    }
     public static void main(String[] args) {
         Student s1=new Student();
         Student s2=new Student();

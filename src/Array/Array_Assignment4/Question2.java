@@ -6,15 +6,14 @@ public class Question2 {
         int[] arr={50,2,5,7,3,6};
 
         for(int i=0;i<arr.length-1;i++){
+            int nextGreatest=-1;
             for(int j=i+1;j<arr.length;j++){
                 if(arr[j]>arr[i]){
-                    System.out.print(arr[j] + " ");
+                    nextGreatest=arr[j];
                     break;
                 }
-                else if(j==arr.length-1){
-                    System.out.print(-1 + " ");
-                }
             }
+            System.out.print(nextGreatest + " ");
         }
         System.out.println(-1);
     }
