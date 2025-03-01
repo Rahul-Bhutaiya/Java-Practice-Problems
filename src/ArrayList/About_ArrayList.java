@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class About_ArrayList {
     public static void main(String[] args) {
         ArrayList<Integer> arrList= new ArrayList<>(5);
-
         arrList.add(10);
         arrList.add(20);
         arrList.add(30);
