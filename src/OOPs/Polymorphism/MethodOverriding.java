@@ -13,7 +13,7 @@ public class MethodOverriding {
 }
 
 class Bank{
-    private int accountNo;
+    int accountNo;
     private double balance;
 
     protected void displayInterest(){

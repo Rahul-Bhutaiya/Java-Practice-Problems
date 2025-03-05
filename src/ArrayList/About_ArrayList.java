@@ -2,7 +2,7 @@ package ArrayList;
 
 import java.util.ArrayList;
 
-public class About_ArrayList {
+public class About_ArrayList extends Object {
     public static void main(String[] args) {
         ArrayList<Integer> arrList= new ArrayList<>(5);
         arrList.add(10);
