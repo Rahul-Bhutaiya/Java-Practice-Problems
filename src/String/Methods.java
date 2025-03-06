@@ -83,7 +83,7 @@ public class Methods {
 
 //        char[] charArr;
 //        charArr=name.toCharArray();
-//        System.out.println(Arrays.toString(charArr));
+//        System.out.println(Arrays.toString(charArr));//[M, a, y, a, n, k]
 //        System.out.println(Arrays.toString(name.toCharArray()));//[M, a, y, a, n, k]
 
 //        System.out.println(Arrays.toString(name.getBytes()));//[77, 97, 121, 97, 110, 107]
