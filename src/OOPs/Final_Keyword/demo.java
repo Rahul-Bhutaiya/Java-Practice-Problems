@@ -18,6 +18,7 @@ class Student{
     final int[] value={10,20,30};
     Student(){
 //        a=20;//error
+//        s1.value[0]=100; // not-error
 //        value= new int[10];//error
     }
 }
