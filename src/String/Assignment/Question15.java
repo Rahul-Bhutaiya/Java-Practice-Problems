@@ -23,4 +23,5 @@ class AnswerQ15{
     }
 }
 //T=O(n)
-//S=O(1)
+//S=O(n)
+//Auxiliary=O(1)

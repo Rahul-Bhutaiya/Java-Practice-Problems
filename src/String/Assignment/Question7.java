@@ -43,11 +43,11 @@ class AnswerQ7{
             int asciiIndex=input.charAt(i);
             asciArray[asciiIndex]++;
         }
-        for (int i=97;i<=122;i++){ //T->O(n)
+        for (int i=97;i<=122;i++){ //T->O(1)
             if(asciArray[i]>0){
                 char ch=(char)i;
                 for(int j=0;j<asciArray[i];j++){
-                    result+=ch;//S->O(n)
+                    result+=ch;
                 }
             }
         }
@@ -55,3 +55,6 @@ class AnswerQ7{
     }
 }
 
+//T=O(n)
+//S=O(n)
+//Auxiliary=O(n)

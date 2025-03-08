@@ -10,7 +10,7 @@ public class Question5 {
 }
 
 class AnswerQ5{
-    public static boolean isEqual(String s1,String s2){ //T = O(n) S= O(1) Auxiliary = O(1)
+    public static boolean isEqual(String s1,String s2){ //T = O(n) S= O(n) Auxiliary = O(1)
         if(s1==s2){
             return true;
         }
