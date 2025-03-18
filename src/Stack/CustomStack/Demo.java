@@ -8,8 +8,7 @@ public class Demo {
         s1.push('h');
         s1.push('u');
         s1.push('l');
-
 //        s1.printReverse();
-        CustomStackString.printReverseIndividualWordsFromGivenSentence("how are you");
+//        CustomStackString.printReverseIndividualWordsFromGivenSentence("how are you");
     }
 }

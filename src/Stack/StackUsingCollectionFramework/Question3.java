@@ -1,7 +1,7 @@
 package Stack.StackUsingCollectionFramework;
 
 import java.util.Stack;
-
+//getMin in O(1) time from stack
 public class Question3 {
     public static void main(String[] args) {
         getMinValue obj1=new getMinValue();
