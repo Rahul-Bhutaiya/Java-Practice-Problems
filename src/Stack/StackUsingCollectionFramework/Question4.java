@@ -45,6 +45,7 @@ class GetMinOptimized{
     public int pop(){
         int poppedValue= stack.pop();
         if(poppedValue<minValue){
+            //getting previous min
             int min=minValue;
             minValue=2*min-poppedValue;
             return min;
