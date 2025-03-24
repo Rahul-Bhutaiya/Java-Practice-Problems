@@ -1,12 +1,14 @@
 package Array.Array_Assignment4;
 
+import java.util.Arrays;
+
 public class Question1 {
     public static void main(String[] args) {
 //        int[] arr= {7, 10, 17, 22, 40, 1, 3, 5};
         int[] arr= {7, 10, 17, 22, 19, 40, 1, 3, 5};
 //        int[] arr= {7, 10, 17, 22};
 
-        int target=1;
+        int target=20;
 
         int left=0;
         int right=arr.length-1;
