@@ -5,56 +5,43 @@ import java.util.Stack;
 
 public class demo {
     public static void main(String[] args) {
-        int[] nextGreater = new int[10001]; // Assuming constraint of elements ≤ 10000
-        Arrays.fill(nextGreater, -1);
-        System.out.println(Arrays.toString(nextGreater));
-//        int[] ar1={10,20,30};
-//        int[] ar2={40,50,60};
-//        int[] ar3=new int[ar1.length+ar2.length];
-//        int p=0;
-//        for(int i=0;i<ar3.length;i+=2){
-//            ar3[i]=ar1[p];
-//            ar3[i+1]=ar2[p];
-//            p++;
-//        }
-//        System.out.println(Arrays.toString(ar3));
 
-//        int[] arr={10,20,20,20,30,40,10,5};
-//        Stack<Integer> stack=new Stack<>();
-//        int p=0;
-//        Arrays.sort(arr);
+        int[] arr={1,20,33,44,55,3,32,354,12};
+//        int[] arr={3,55,44,33,20,1,12,354,32};
+//        int[] arr={32,354,12,1,20,33,44,55,3};
+//        int[] arr={1,20,33,44,55,3,32,354,12};
+//        int[] arr={354,12,1,20,33,44,55,3,32};
+//        int k=3000;
+//        k=k%arr.length;
+//        leftRotateArray(arr,k);
+////        leftRotateArray2(arr,3);
 //        System.out.println(Arrays.toString(arr));
-//
-//        for(int i=1;i<arr.length;i++){
-//            if(arr[p]!=arr[i]){
-//                p=i;
-//            }
-//            else{
-//                if(stack.isEmpty()){
-//                    stack.push(arr[i]);
-//                }
-//                else if(stack.peek()<arr[i]){
-//                    stack.push(arr[i]);
-//                }
-//            }
-//        }
-//        System.out.println(stack);
-
-//        int[] arr={10,20,20,30,20,40,50};
-//        int p=7;
-//        p=delete(arr,p,20);
-//        System.out.println(Arrays.toString(arr));
+//        System.out.println(Arrays.toString(new int[]{}));
+        System.out.println(30^10);
     }
-    public static int delete(int[] arr,int p,int deleting){
-        for(int i=0;i<p;i++){
-            if(arr[i]==deleting){
-                for(int j=i;j<p-1;j++){
-                    arr[j]=arr[j+1];
-                }
-                p--;
-                i--;
+
+//    Left rotate an array by d positions
+
+    public static void leftRotateArray(int[] arr,int k){
+        for(int i=1;i<=k;i++){
+            int temp=arr[arr.length-1];
+            for(int j=arr.length-1;j>0;j--){
+                arr[j]=arr[j-1];
             }
+            arr[0]=temp;
         }
-        return p;
     }
+
+    public static void leftRotateArray2(int[] arr,int k){
+        int index=k-1;
+        int right=arr.length-1;
+        while(index>=0){
+            int temp=arr[right];
+            arr[right]=arr[index];
+            arr[index]=temp;
+            index--;
+            right--;
+        }
+    }
+
 }
