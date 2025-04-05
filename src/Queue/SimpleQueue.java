@@ -55,7 +55,6 @@ class demo{
         if(front==rear){
             front=rear=-1;
         }
-
         return removed;
     }
 

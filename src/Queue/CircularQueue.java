@@ -9,8 +9,10 @@ public class CircularQueue {
         d1.enqueue(30);
         d1.enqueue(40);
         d1.enqueue(50);
-//        d1.dequeue();
-//        d1.dequeue();
+        d1.dequeue();
+        d1.dequeue();
+        d1.enqueue(60);
+        d1.enqueue(70);
         d1.print();
     }
 }
@@ -35,7 +37,7 @@ class demoTest{
         }
 
         if(front==-1){
-            front=0;
+            front=0;// Because If front is at -1 then I can't check that is Queue is full or not
         }
 
         rear=(rear+1)%length;
@@ -83,8 +85,19 @@ class demoTest{
         return queue[front];
     }
 
+    public int size() {
+        if (isEmpty()) {
+            return 0;
+        } else if (rear >= front) {
+            return rear - front + 1;
+        } else {
+            return length - front + rear + 1;
+        }
+    }
+
+
     public boolean isEmpty(){
-        return (front==-1 && rear==-1);
+        return (rear==-1);
     }
 
     public boolean isFull(){
