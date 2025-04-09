@@ -7,13 +7,15 @@ public class Test {
         LinkedList l1=new LinkedList();
 
 
+        l1.insert(20);
+        l1.insert(20);
+        l1.insert(10);
+        l1.insert(30);
         l1.insert(10);
         l1.insert(10);
         l1.insert(20);
-        l1.insert(30);
-        l1.insert(30);
-//        l1.delete(10);
-        l1.delete(10);
+        l1.print();
+        l1.delete(20);
         l1.print();
 //        l1.printRev();
     }
@@ -36,17 +38,21 @@ class LinkedList{
 
     public void delete(int input){
         if(head==null){
-            System.out.println("Linked List is Empty. Can't Delete");
+            System.out.println("Linked List is Empty.");
         }
         else if(head.value==input){
             if(head==tail){
                 head=tail=null;
             }
             else{
-                head=head.next;
+                Node temp=head.next;
+                head.next=null;
+                head=temp;
+                delete(input);
             }
         }
         else{
+            boolean isDeleted=false;
             Node temp = head;
 
             while (temp.next!=null){
@@ -54,15 +60,21 @@ class LinkedList{
                     if(temp.next==tail){
                         temp.next=null;
                         tail=temp;
+                        isDeleted=true;
                     }
                     else{
-                        temp.next=temp.next.next;
+                        Node temp2=temp.next.next;
+                        temp.next.next=null;
+                        temp.next=temp2;
+                        isDeleted=true;
                     }
                     continue;
                 }
                 temp=temp.next;
             }
-            System.out.println("Element Doesn't Exists");
+            if(!isDeleted) {
+                System.out.println("Element Doesn't Exists");
+            }
         }
     }
 
