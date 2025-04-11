@@ -1,6 +1,5 @@
 package LinkedList;
 
-import java.util.Stack;
 
 public class Test {
     public static void main(String[] args) {
@@ -17,7 +16,6 @@ public class Test {
         l1.print();
         l1.delete(20);
         l1.print();
-//        l1.printRev();
     }
 }
 
@@ -79,8 +77,11 @@ class LinkedList{
     }
 
     public void print(){
+        if(head==null){
+            System.out.println("Linked List is Empty");
+            return;
+        }
         Node temp = head;
-
         while (temp!=null){
             System.out.print(temp.value + " ");
             temp=temp.next;
@@ -89,8 +90,11 @@ class LinkedList{
     }
 
     public boolean find(int num){
+        if(head==null){
+            System.out.println("Linked List is Empty");
+            return false;
+        }
         Node temp=head;
-
         while (temp!=null){
             if(temp.value==num){
                 return true;
@@ -100,20 +104,65 @@ class LinkedList{
         return false;
     }
 
-    public void printRev(){
-        Stack<Integer> stack=new Stack<>();
-        Node temp=head;
-
-        while (temp!=null){
-            stack.push(temp.value);
+    public Node search(int num){
+        if(head.value==num){
+            return head;
+        }
+        Node temp = head;
+        while (temp.next!=null){
+            if(temp.next.value==num){
+                return temp.next;
+            }
             temp=temp.next;
         }
-
-        while (!stack.isEmpty()){
-            System.out.print(stack.pop() + " ");
-        }
-        System.out.println();
+        System.out.println("Element does not exists");
+        return new Node(-1);
     }
+
+    public void update(int oldValue, int newValue){
+        Node temp=head;
+        boolean isExists=false;
+
+        while (temp!=null){
+            if(temp.value==oldValue){
+                temp.value=newValue;
+                isExists=true;
+            }
+            temp=temp.next;
+        }
+        if(!isExists){
+            System.out.println("Old Value Doesn't Exists");
+        }
+    }
+
+    public Node getHead(){
+        return head;
+    }
+
+    public void setHead(Node newHead){
+        this.head=newHead;
+    }
+
+    public boolean insertLoop(int num){
+        if(head==null) return false;
+
+        if(head.value==num){
+            tail.next=head;
+            return true;
+        }
+        Node temp = head;
+
+        while (temp.next!=null){
+            if(temp.next.value==num){
+                tail.next=temp.next;
+                return true;
+            }
+            temp=temp.next;
+        }
+        return false;
+
+    }
+
 }
 
 class Node{
