@@ -105,6 +105,10 @@ class LinkedList{
     }
 
     public Node search(int num){
+        if(head==null){
+            System.out.println("Your LinkedList is Empty");
+            return new Node();
+        }
         if(head.value==num){
             return head;
         }
@@ -116,7 +120,7 @@ class LinkedList{
             temp=temp.next;
         }
         System.out.println("Element does not exists");
-        return new Node(-1);
+        return new Node();
     }
 
     public void update(int oldValue, int newValue){
@@ -168,6 +172,8 @@ class LinkedList{
 class Node{
     int value;
     Node next;
+
+    public Node(){}
 
     public Node(int num){
         this.value=num;
