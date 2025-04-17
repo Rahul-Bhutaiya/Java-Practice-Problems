@@ -13,7 +13,7 @@ public class Question2 {
     }
 
 //    Time = O(N)
-    public static int getLength(Node head){
+    static int getLength(Node head){
         int counter=0;
 
         while (head!=null){

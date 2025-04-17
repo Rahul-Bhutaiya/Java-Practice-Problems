@@ -9,14 +9,7 @@ public class test1 {
                 {9,10,11,11}
         };
 
-        int sum=0;
-        for(int i=0;i<matrix.length;i++){
-            sum+=matrix[i][i];
-            sum+=matrix[i][matrix.length-1-i];
-        }
-        if(matrix.length%2==1){
-            sum-=matrix[matrix.length/2][matrix.length/2];
-        }
-        System.out.println(sum);
+        int num=0^1;
+        System.out.println(num);
     }
 }

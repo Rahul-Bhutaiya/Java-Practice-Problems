@@ -6,15 +6,14 @@ public class Test {
         LinkedList l1=new LinkedList();
 
 
-        l1.insert(20);
-        l1.insert(20);
-        l1.insert(10);
-        l1.insert(30);
-        l1.insert(10);
-        l1.insert(10);
-        l1.insert(20);
+        l1.insert(7);
+        l1.insert(7);
+        l1.insert(7);
+        l1.insert(7);
+        l1.insert(7);
+        l1.insert(7);
         l1.print();
-        l1.delete(20);
+        l1.delete(7);
         l1.print();
     }
 }
