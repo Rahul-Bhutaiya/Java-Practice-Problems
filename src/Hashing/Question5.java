@@ -21,7 +21,7 @@ public class Question5 {
             }
         }
 
-        for(Map.Entry eachEntry:hashMap.entrySet()){
+        for(Map.Entry<Integer,Integer> eachEntry:hashMap.entrySet()){
             System.out.println(eachEntry.getKey() + " = " + eachEntry.getValue());
         }
     }

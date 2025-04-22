@@ -6,7 +6,7 @@ import java.util.Map;
 //Check if two arrays are equal or not
 public class Question8 {
     public static void main(String[] args) {
-        int[] arr1={100,50,50,30,40,30};
+        int[] arr1={100,50};
         int[] arr2={30,40,50,100,30,50};
 
         HashMap<Integer,Integer> hashMap=new HashMap<>();

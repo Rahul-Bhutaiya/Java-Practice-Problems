@@ -1,6 +1,9 @@
 package ArrayList;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
+
+
 
 public class About_ArrayList extends Object {
     public static void main(String[] args) {
@@ -8,8 +11,8 @@ public class About_ArrayList extends Object {
         arrList.add(10);
         arrList.add(20);
         arrList.add(30);
-        arrList.add(0,90);
-        System.out.println(arrList);
+
+
 
 //        arrList.clear();
 //        arrList.remove(0);
