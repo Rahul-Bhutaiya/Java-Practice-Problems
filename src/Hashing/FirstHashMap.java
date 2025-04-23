@@ -5,8 +5,8 @@ import java.util.*;
 public class FirstHashMap {
     public static void main(String[] args) {
         HashMap<Integer,String> hashMap=new HashMap<>();
-
         hashMap.put(5,"Rahul");
+        hashMap.put(6,"sallu");
 //        hashMap.put(2,"Urvish");
 //        hashMap.put(33,"Sallu");
 //        hashMap.put(4,"Mayank");
@@ -23,6 +23,7 @@ public class FirstHashMap {
 
         System.out.println(hashMap);
 
+//        System.out.println(hashMap.remove(6));
 //        hashMap.remove(null);
 
 

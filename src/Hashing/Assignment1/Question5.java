@@ -1,16 +1,14 @@
-package Hashing;
+package Hashing.Assignment1;
 
 import java.util.HashMap;
 import java.util.Map;
 
-//Most frequent element in an array
-public class Question7 {
+//Count frequency of each number in array
+public class Question5 {
     public static void main(String[] args) {
-        int[] arr={101,335,100,10,30,30,30,30,20,20,20,40,40,100,55,1};
-        int maxFrequency=0;
-        int result=0;
+        int[] arr={100,10,20,30,55,30,30,20,40,40,100,55,-55,55,55,55,55,5};
 
-        HashMap<Integer,Integer> hashMap = new HashMap<>();
+        HashMap<Integer,Integer> hashMap=new HashMap<>();
 
         for(Integer eachNumber:arr){
             if(hashMap.get(eachNumber)!=null){
@@ -24,12 +22,8 @@ public class Question7 {
         }
 
         for(Map.Entry<Integer,Integer> eachEntry:hashMap.entrySet()){
-            if(eachEntry.getValue()>maxFrequency){
-                maxFrequency=eachEntry.getValue();
-                result=eachEntry.getKey();
-            }
+            System.out.println(eachEntry.getKey() + " = " + eachEntry.getValue());
         }
-        System.out.println(result);
     }
 }
 //Time = O(N)

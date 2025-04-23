@@ -1,4 +1,4 @@
-package Hashing;
+package Hashing.Assignment1;
 
 import java.util.HashMap;
 import java.util.Map;
