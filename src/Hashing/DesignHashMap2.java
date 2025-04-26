@@ -4,27 +4,41 @@ import java.util.Objects;
 
 public class DesignHashMap2 {
     public static void main(String[] args) {
-        MyHashMap<Integer,String> hashMap = new MyHashMap<>();
-        hashMap.put(11,"Ramesh");
-        hashMap.put(20,"Suresh");
-        hashMap.put(30,"Surat");
-        hashMap.put(3430,"Prakash");
-        hashMap.put(22330,"Vishal");
-        hashMap.put(24320,"Bholu");
-        hashMap.put(2540,"Mayank");
-        hashMap.put(26650,"Urvish");
-        hashMap.put(2665430,"Sidharth");
-        hashMap.put(266505645,"Pant");
-        hashMap.put(266505654,"Karan");
-        hashMap.put(26650645,"Keval");
-        hashMap.put(2665045,"Sahil");
-        hashMap.put(26650454,"Shailesh");
-        hashMap.put(26650464,"Mahesh");
-        hashMap.put(266504,"Gaurav");
-        hashMap.put(26650465,"Shubham");
-        hashMap.put(26650490,"dhruv");
-        hashMap.put(1,"naimish");
-        hashMap.put(2665,"gautam");
+        MyHashMap<Person4,String> hashMap = new MyHashMap<>();
+
+        Person4 p1 =new Person4(10,"Rahul");
+        Person4 p2 =new Person4(20,"Urvish");
+        Person4 p3 =new Person4(10,"Rahul");
+
+        hashMap.put(p1,"Manager");
+        hashMap.put(p2,"HR");
+        hashMap.put(p3,"Employee");
+
+        System.out.println(hashMap.get(p3));
+
+        hashMap.print();
+
+//        MyHashMap<Integer,String> hashMap = new MyHashMap<>();
+//        hashMap.put(11,"Ramesh");
+//        hashMap.put(20,"Suresh");
+//        hashMap.put(30,"Surat");
+//        hashMap.put(3430,"Prakash");
+//        hashMap.put(22330,"Vishal");
+//        hashMap.put(24320,"Bholu");
+//        hashMap.put(2540,"Mayank");
+//        hashMap.put(26650,"Urvish");
+//        hashMap.put(2665430,"Sidharth");
+//        hashMap.put(266505645,"Pant");
+//        hashMap.put(266505654,"Karan");
+//        hashMap.put(26650645,"Keval");
+//        hashMap.put(2665045,"Sahil");
+//        hashMap.put(26650454,"Shailesh");
+//        hashMap.put(26650464,"Mahesh");
+//        hashMap.put(266504,"Gaurav");
+//        hashMap.put(26650465,"Shubham");
+//        hashMap.put(26650490,"dhruv");
+//        hashMap.put(1,"naimish");
+//        hashMap.put(2665,"gautam");
 
 //        MyHashMap<String,Integer> hashMap = new MyHashMap<>();
 //        hashMap.put("Rahul",1);
@@ -35,11 +49,11 @@ public class DesignHashMap2 {
 //        hashMap.put("sumansf",6);
 //        hashMap.put("sumansfs",10);
 
-        System.out.println(hashMap.getCurrentSize());
-        System.out.println(hashMap.getArrLength());
-        System.out.println(hashMap.get(266505645));
+//        System.out.println(hashMap.getCurrentSize());
+//        System.out.println(hashMap.getArrLength());
+//        System.out.println(hashMap.get("keval"));
 
-        hashMap.print();
+//        hashMap.print();
     }
 }
 
@@ -85,7 +99,7 @@ class MyHashMap<K,V>{
             Node2<K,V> prev=null;
             Node2<K,V> temp = mapArr[index];
             while (temp!=null){
-                if(temp.getKey()==key){
+                if(temp.getKey().equals(key)){
                     temp.setValue(value);
                     return;
                 }
@@ -169,9 +183,9 @@ class MyHashMap<K,V>{
 
 
 class Node2<K,V>{
-    private K key;
+    private final K key;
+    private final int hashCode;
     private V value;
-    private int hashCode;
     private Node2<K,V> next;
 
     public Node2(K key,V value,int hashCode){
@@ -202,5 +216,49 @@ class Node2<K,V>{
 
     public void setValue(V newValue){
         this.value=newValue;
+    }
+}
+
+class Person4{
+    private int id;
+    private String name;
+
+    public Person4(int id,String name){
+        this.id=id;
+        this.name=name;
+    }
+
+    public int getId(){
+        return this.id;
+    }
+
+    public String getName(){
+        return this.name;
+    }
+
+    @Override
+    public String toString() {
+        return "{id : "+id+", name : "+name+"}";
+    }
+
+//    //Deep Comparison
+    @Override
+    public boolean equals(Object obj) {
+        if(this==obj){
+            return true;
+        }
+        else if(obj==null){
+            return false;
+        }
+        else if(this.getClass() != obj.getClass()){
+            return false;
+        }
+        Person4 input = (Person4)obj;
+        return this.id==input.getId() && Objects.equals(this.name,input.getName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(this.id,this.name);
     }
 }
