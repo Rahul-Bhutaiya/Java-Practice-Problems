@@ -3,17 +3,21 @@ package Hashing;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Objects;
 
 public class Testing {
     public static void main(String[] args) {
-        ArrayList<Integer> arl=new ArrayList<>();
+//        ArrayList<Integer> arl=new ArrayList<>();
 
+
+//        char ch='z';
+//        System.out.println(++ch);
 //        Node n1=new Node();
 //        arl.add(5,n1);
-        arl.add(0,10);
-        arl.add(1,20);
-        arl.add(2,30);
-        arl.set(2,40);
+//        arl.add(0,10);
+//        arl.add(1,20);
+//        arl.add(2,30);
+//        arl.set(2,40);
 //        arl.add(2,40);
 //        arl.add(3,40);
 //        arl.add(4,50);
@@ -24,11 +28,11 @@ public class Testing {
 //        arl.add(9,20);
 //        arl.add(10,20);
 
-        System.out.println(arl);
+//        System.out.println(arl);
 
 //        System.out.println(arl.get(13));
 
-        HashMap<Integer,String> hashMap=new HashMap<>(66);
+//        HashMap<Integer,String> hashMap=new HashMap<>(66);
 //        HashSet<Integer> hashSet=new HashSet<>();
 //
 //        hashMap.put(10,"Rahul");
@@ -40,7 +44,3 @@ public class Testing {
     }
 }
 
-class Node{
-    int val;
-    Node next;
-}

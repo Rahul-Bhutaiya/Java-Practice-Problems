@@ -8,8 +8,8 @@ import java.util.HashMap;
 
 public class Question1 {
     public static void main(String[] args) {
-        String input="    Jav'a   is  a great. Java is fast.   kkk a  ";
-        HashMap<String,Integer> hashMap=countFrequency(input);
+        String input="    Jav'a   is  a great. Java is fast.   kkk a great  ";
+        HashMap<String,Integer> hashMap=countFrequency2(input);
         System.out.println(hashMap);
     }
 

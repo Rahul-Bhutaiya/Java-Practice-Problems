@@ -9,10 +9,11 @@ public class FirstHashSet {
         hashSet.add(10);
         hashSet.add(20);
         hashSet.add(30);
+        hashSet.add(30);
 
         System.out.println(hashSet);
-        hashSet.remove(10);
-        System.out.println(hashSet);
+//        hashSet.remove(10);
+//        System.out.println(hashSet);
 //        System.out.println(hashSet.size());
 
 //        for(Integer eachElement:hashSet){
