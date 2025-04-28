@@ -10,15 +10,22 @@ public class Question5 {
 
         HashMap<Integer,Integer> hashMap=new HashMap<>();
 
-        for(Integer eachNumber:arr){
-            if(hashMap.get(eachNumber)!=null){
-                int currentFrequency = hashMap.get(eachNumber);
-                int newFrequency=++currentFrequency;
-                hashMap.put(eachNumber,newFrequency);
-            }
-            else{
-                hashMap.put(eachNumber,1);
-            }
+//        Method:1
+//        for(Integer eachNumber:arr){
+//            if(hashMap.get(eachNumber)!=null){
+//                int currentFrequency = hashMap.get(eachNumber);
+//                int newFrequency=++currentFrequency;
+//                hashMap.put(eachNumber,newFrequency);
+//            }
+//            else{
+//                hashMap.put(eachNumber,1);
+//            }
+//        }
+
+//        Method:2
+        for(int eachNumber:arr){
+            int frequency = hashMap.getOrDefault(eachNumber,0)+1;
+            hashMap.put(eachNumber,frequency);
         }
 
         for(Map.Entry<Integer,Integer> eachEntry:hashMap.entrySet()){

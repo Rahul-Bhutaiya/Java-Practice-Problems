@@ -14,7 +14,7 @@ public class Question3 {
 
 
         for(String word:words){
-            String sortedWord=sortWord(word);//Time => O(nlogn) Space =>O(N)
+            String sortedWord=sortWord(word);
             if(hashMap.containsKey(sortedWord)){
                 hashMap.get(sortedWord).add(word);
             }else{
