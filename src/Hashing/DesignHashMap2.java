@@ -4,24 +4,24 @@ import java.util.Objects;
 
 public class DesignHashMap2 {
     public static void main(String[] args) {
-        MyHashMap<Person4,String> hashMap = new MyHashMap<>();
+//        MyHashMap<Person4,String> hashMap = new MyHashMap<>();
+//
+//        Person4 p1 =new Person4(10,"Rahul");
+//        Person4 p2 =new Person4(20,"Urvish");
+//        Person4 p3 =new Person4(10,"Rahul");
+//
+//        hashMap.put(p1,"Manager");
+//        hashMap.put(p2,"HR");
+//        hashMap.put(p3,"Employee");
+//
+//        System.out.println(hashMap.get(p3));
+//
+//        hashMap.print();
 
-        Person4 p1 =new Person4(10,"Rahul");
-        Person4 p2 =new Person4(20,"Urvish");
-        Person4 p3 =new Person4(10,"Rahul");
-
-        hashMap.put(p1,"Manager");
-        hashMap.put(p2,"HR");
-        hashMap.put(p3,"Employee");
-
-        System.out.println(hashMap.get(p3));
-
-        hashMap.print();
-
-//        MyHashMap<Integer,String> hashMap = new MyHashMap<>();
-//        hashMap.put(11,"Ramesh");
-//        hashMap.put(20,"Suresh");
-//        hashMap.put(30,"Surat");
+        MyHashMap<Integer,String> hashMap = new MyHashMap<>();
+        hashMap.put(11,"Ramesh");
+        hashMap.put(20,"Suresh");
+        hashMap.put(30,"Suraj");
 //        hashMap.put(3430,"Prakash");
 //        hashMap.put(22330,"Vishal");
 //        hashMap.put(24320,"Bholu");
@@ -39,6 +39,11 @@ public class DesignHashMap2 {
 //        hashMap.put(26650490,"dhruv");
 //        hashMap.put(1,"naimish");
 //        hashMap.put(2665,"gautam");
+
+//        hashMap.print();
+//        hashMap.remove(300);
+//        System.out.println();
+//        hashMap.print();
 
 //        MyHashMap<String,Integer> hashMap = new MyHashMap<>();
 //        hashMap.put("Rahul",1);
@@ -76,6 +81,7 @@ class MyHashMap<K,V>{
         mapArr=new Node2[arrLength];
         this.size=0;
     }
+
     public MyHashMap(int arrLength,float loadFactor){
         this.arrLength=arrLength;
         this.loadFactor=loadFactor;
@@ -112,6 +118,36 @@ class MyHashMap<K,V>{
             if(checkIsLoaded(this.size)){
                 rehash();
             }
+        }
+    }
+
+    public boolean remove(K key){
+        int hashCode = getHashCode(key);
+        int index = getIndex(hashCode,arrLength);
+
+        if(mapArr[index]==null){
+            return false;
+        }
+        else{
+            Node2<K,V> prev = null;
+            Node2<K,V> temp = mapArr[index];
+
+            while (temp!=null){
+                if(temp.getKey().equals(key)){
+                    Node2<K,V> temp2 = temp.getNextNode();
+                    temp.setNextNode(null);
+                    if(prev!=null){
+                        prev.setNextNode(temp2);
+                    }
+                    else{
+                        mapArr[index] = temp2;
+                    }
+                    return true;
+                }
+                prev=temp;
+                temp=temp.getNextNode();
+            }
+            return false;
         }
     }
 
