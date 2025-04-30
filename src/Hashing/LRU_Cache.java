@@ -31,6 +31,9 @@ public class LRU_Cache<K,V> {
             doublyLinkedList.insertAfterHead(node);
         }
         else{
+            if(capacity==0){
+                return;
+            }
             if(this.size==capacity){
                 DoublyNode<K,V> lruNode = doublyLinkedList.tail.prev;
                 this.hashMap.remove(lruNode.key);
@@ -54,16 +57,16 @@ public class LRU_Cache<K,V> {
     }
 
     public static void main(String[] args) {
-        LRU_Cache<Integer,String> obj1 = new LRU_Cache<>(4);
+        LRU_Cache<Integer,String> obj1 = new LRU_Cache<>(0);
         obj1.put(10,"A");
-        obj1.put(20,"B");
-        obj1.put(30,"C");
+//        obj1.put(20,"B");
+//        obj1.put(30,"C");
 //        obj1.put(40,"D");
 //        obj1.put(50,"E");
 
-        System.out.println(obj1.get(10));
+//        System.out.println(obj1.get(10));
 
-        obj1.print();
+//        obj1.print();
 
     }
 }
