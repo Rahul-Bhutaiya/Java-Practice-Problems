@@ -1,0 +1,19 @@
+Today's Recursion assignment for Lab:
+
+1. Check if a string is a palindrome
+2. Reverse a string
+3. Find the sum of digits of a number
+4. Check if an array is sorted 
+5. Recursive binary search
+6. Print all subsets (power set) of a string
+
+Input : abc
+Output :  c b bc a ac ab abc 
+
+7. Find all permutations of a string
+Input : abc
+Output :  abc acb bac bca cab cba 
+
+8. Generate all binary strings of length N
+Input : 3
+Output : 000 001 010 011 100 101 110 111
