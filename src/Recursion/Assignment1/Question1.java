@@ -9,19 +9,10 @@ public class Question1 {
         System.out.println("Good Morning");
         GM();
     }
-//    public static void GE(){
-//        System.out.println("Good Evening");
-//        GE();
-//    }
-
-    public static long fibonacci(int n){
-        if(n==1){
-            return 1;
-        }
-
-        if(n==0){
-            return 1;
-        }
-        return fibonacci(n-1) + fibonacci(n-2);
+    public static void GE(){
+        System.out.println("Good Evening");
+        GE();
     }
+
+
 }
