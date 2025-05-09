@@ -49,7 +49,6 @@ public class Question11 {
         }
 
         long num = fibonacciMemo(n-1)+fibonacciMemo(n-2);
-        System.out.println(n+" : "+num);
         hashMap.put(n,num);
         return num;
     }

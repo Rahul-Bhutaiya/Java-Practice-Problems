@@ -22,8 +22,19 @@ public class MyBinaryTree {
 
     TNode root;
 
+    public MyBinaryTree(){
+
+    }
+
+    public MyBinaryTree(TNode root){
+        this.root=root;
+    }
+
     //Breadth First Search/Traversal
     public void levelOrderTraversal(){
+        if(root==null){
+            return;
+        }
         Queue<TNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()){
@@ -41,7 +52,7 @@ public class MyBinaryTree {
     //Depth First Search/Traversal
 
     //Pre-Order Traversal
-    public void preOrder(TNode root){
+    public static void preOrder(TNode root){
         if(root==null){
             return;
         }
@@ -51,7 +62,7 @@ public class MyBinaryTree {
     }
 
     //In-Order Traversal
-    public void inOrder(TNode root){
+    public static void inOrder(TNode root){
         if(root==null){
             return;
         }
@@ -61,7 +72,7 @@ public class MyBinaryTree {
     }
 
     //Post-Order Traversal
-    public void postOrder(TNode root){
+    public static void postOrder(TNode root){
         if(root==null){
             return;
         }
