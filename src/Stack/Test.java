@@ -1,8 +1,10 @@
 package Stack;
 
 import java.util.Arrays;
+import java.util.Stack;
 
 public class Test {
+
        static int[] arr={22,33,44,55,66,77,88,0,0,0,0};
 //       static int[] arr={22,33,44,55,55,66,77,88,0,0,0};
        static int pointer=7;

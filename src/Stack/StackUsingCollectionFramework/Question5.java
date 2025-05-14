@@ -6,7 +6,7 @@ import java.util.Stack;
 public class Question5 {
     public static void main(String[] args) {
 //        System.out.println(isBalanced("(){([[]{}()()])}"));
-        System.out.println(isBalanced("){}"));
+        System.out.println(isBalanced("{}{"));
     }
 
     public static boolean isBalanced(String input){

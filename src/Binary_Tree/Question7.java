@@ -1,5 +1,7 @@
 package Binary_Tree;
 
+import java.util.Deque;
+import java.util.LinkedList;
 import java.util.Stack;
 
 //pre-order Tree Traversal without Recursion
@@ -11,6 +13,9 @@ public class Question7 {
         MyBinaryTree.preOrder(root);
         System.out.println();
         preOrder(root);
+
+        Deque<Integer> dq = new LinkedList<>();
+//        dq.addFirst();
     }
 
     public static void preOrder(TNode root){

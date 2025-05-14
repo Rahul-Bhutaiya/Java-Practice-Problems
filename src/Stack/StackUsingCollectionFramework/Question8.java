@@ -4,8 +4,8 @@ import java.util.Stack;
 
 public class Question8 {
     public static void main(String[] args) {
-        String prefix="*+ab+-cde";
-//        String prefix="*+ab-cd";
+//        String prefix="*+ab+-cde";
+        String prefix="*+ab-cd";
         System.out.println(getPostfixFromPrefix(prefix));
     }
     public static String getPostfixFromPrefix(String prefix){

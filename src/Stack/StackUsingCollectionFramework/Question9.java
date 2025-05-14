@@ -4,7 +4,9 @@ import java.util.Stack;
 
 public class Question9 {
     public static void main(String[] args) {
-        String postFix="ab+cd-e+*";
+//        String postFix="ab+cd-e+*";
+        String postFix="ab+cd-*";
+
         System.out.println(getPrefixFromPostFix(postFix));
     }
     public static String getPrefixFromPostFix(String postFix){

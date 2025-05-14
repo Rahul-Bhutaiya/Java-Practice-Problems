@@ -23,6 +23,13 @@ public class Question1 {
 //        System.out.println(countNode2(bTree.root));
 
         System.out.println(countNode3(bTree.root));
+
+//        single line value change of two variables
+//        int a =10;
+//        int b =20;
+//        System.out.println(a+" "+b);
+//        a=a+b-(b=a);
+//        System.out.println(a+" "+b);
     }
 
 
