@@ -52,6 +52,8 @@ public class MyBST2 {
         return search(root.right,target);
     }
 
+    //Average case time complexity  = O(log n)
+    //Worst case time complexity  = O(n) // for Skwed Binary Tree
     public static Node delete(Node root, int target){
         if(root==null) return null;
 

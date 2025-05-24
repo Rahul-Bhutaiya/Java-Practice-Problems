@@ -5,6 +5,7 @@ import java.util.*;
 public class FirstHashMap {
     public static void main(String[] args) {
 //        HashMap<Person2,String> hashMap=new HashMap<>();
+        
 //
 //        Person2 p1=  new Person2(10,"Rahul");
 //        Person2 p2=  new Person2(10,"Rahul");
@@ -29,6 +30,7 @@ public class FirstHashMap {
 //        hashMap.put(null,"Ma");
 
 //        System.out.println(hashMap.get(11));
+//        hashMap.getOrDefault()
 
 //        System.out.println(hashMap);
 
