@@ -5,8 +5,8 @@ import java.util.Stack;
 //Prefix to Infix Conversion
 public class Question6 {
     public static void main(String[] args) {
-//        String prefixString="*+ab--cde";
-        String prefixString="*+ab-cd";
+        String prefixString="*+ab--cde";
+//        String prefixString="*+ab-cd";
 //        String prefixString="++d";
         System.out.println(getInfixFromPrefix(prefixString));
     }

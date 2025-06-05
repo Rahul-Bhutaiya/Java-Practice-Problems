@@ -22,10 +22,10 @@ public class Practice1 {
 //        Collections.sort(numbers);
 
         System.out.println(numbers);
-        Collections.sort(numbers,new IntegerDesc());
+//        Collections.sort(numbers,new IntegerDesc());
 //        Collections.sort(numbers,(n1,n2)->n2-n1);
 //        Collections.sort(numbers,new DescendingNumber());
-//        numbers.sort(new DescendingNumber());
+        numbers.sort(new DescendingNumber());
         System.out.println(numbers);
 
     }

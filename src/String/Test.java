@@ -1,11 +1,14 @@
 package String;
 
+import Binary_Tree.Test1;
+
 import java.util.HashSet;
 
 class Test {
     public static void main(String[] args) {
         String[] emails ={"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"};
         numUniqueEmails(emails);
+
     }
     public static int numUniqueEmails(String[] emails) {
         HashSet<String> hashSet = new HashSet<>();

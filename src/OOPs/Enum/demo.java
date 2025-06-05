@@ -2,8 +2,8 @@ package OOPs.Enum;
 
 public class demo {
     public static void main(String[] args) {
-//        System.out.println(DaysName.Tuesday.ordinal());
-        System.out.println(DaysName.Sunday.getDayNo());
+        System.out.println(DaysName.Tuesday.ordinal());
+//        System.out.println(DaysName.Sunday.getDayNo());
     }
 }
 

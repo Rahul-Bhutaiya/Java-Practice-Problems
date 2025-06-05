@@ -96,8 +96,10 @@ class Student{
     }
 
     public double getAverageMarks(){
-        double totalMarks2=this.totalMarks;
-        return totalMarks2/this.marks.length;
+//        double totalMarks2=this.totalMarks;
+//        return totalMarks2/this.marks.length;
+
+        return (double)this.totalMarks/this.marks.length;
     }
 
     public int getPassCount(){
