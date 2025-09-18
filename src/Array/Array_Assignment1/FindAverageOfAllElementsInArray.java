@@ -10,3 +10,4 @@ public class FindAverageOfAllElementsInArray {
         System.out.println("Average = "+sum/arr.length);
     }
 }
+//done

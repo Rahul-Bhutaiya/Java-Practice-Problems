@@ -53,7 +53,7 @@ class SortBasedOnMarksDesc implements  Comparator<Student>{
     }
 }
 
-class Student implements Comparable<Student>{
+class Student{
     int id;
     String name;
     int marks;
@@ -64,11 +64,11 @@ class Student implements Comparable<Student>{
         this.marks = marks;
     }
 
-    @Override
-    public int compareTo(Student s1) {
-        return this.id-s1.id;
-    }
-
+//    @Override
+//    public int compareTo(Student s1) {
+//        return this.id-s1.id;
+//    }
+//
     @Override
     public String toString() {
         return this.id+" = "+this.name+" = "+this.marks;

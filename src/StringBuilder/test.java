@@ -8,8 +8,8 @@ public class test {
     public static void main(String[] args) {
 
 
-        StringBuilder s1= new StringBuilder("Rahul");
-        System.out.println((char)('a'+('1'-'0')));
+//        StringBuilder s1= new StringBuilder("Rahul");
+//        System.out.println((char)('a'+('1'-'0')));
 
 //        StringBuilder s2= new StringBuilder("Rahul");
 //        System.out.println(s1==s2);//false

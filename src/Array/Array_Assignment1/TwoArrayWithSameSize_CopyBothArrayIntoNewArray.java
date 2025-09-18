@@ -15,3 +15,4 @@ public class TwoArrayWithSameSize_CopyBothArrayIntoNewArray {
         System.out.println(Arrays.toString(copyArray));
     }
 }
+//done

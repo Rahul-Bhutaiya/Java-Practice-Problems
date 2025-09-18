@@ -21,7 +21,7 @@ public class Practice1 {
 //        numbers.sort(null);
 //        Collections.sort(numbers);
 
-        System.out.println(numbers);
+//        System.out.println(numbers);
 //        Collections.sort(numbers,new IntegerDesc());
 //        Collections.sort(numbers,(n1,n2)->n2-n1);
 //        Collections.sort(numbers,new DescendingNumber());

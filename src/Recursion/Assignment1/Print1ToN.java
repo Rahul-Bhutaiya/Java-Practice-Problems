@@ -6,14 +6,14 @@ public class Print1ToN {
         print(5);
     }
 
-    public static int print(int n){
+    public static void print(int n){
         if(n==1){
             System.out.print(1 + " ");
-            return 1;
+            return;
         }
         print(n-1);
         System.out.print(n + " ");
-        return n;
+//        return n;
     }
 
 }

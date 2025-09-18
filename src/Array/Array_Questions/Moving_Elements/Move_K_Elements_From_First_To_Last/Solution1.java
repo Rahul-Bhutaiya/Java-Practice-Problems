@@ -7,7 +7,7 @@ public class Solution1 {
 //        int[] arr={1,2,3,4,5,6};
         int[] arr={1,22,3,14,50,6,0};
 //        int[] arr={1,0};
-        int k=1;
+        int k=3;
         k=k%arr.length;
         for(int i=1;i<=k;i++){
             int temp=arr[0];

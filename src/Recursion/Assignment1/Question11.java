@@ -4,12 +4,14 @@ import java.util.HashMap;
 
 //Print nth number in fibonacci series using recursion
 public class Question11 {
+
     public static HashMap<Integer,Long> hashMap = new HashMap<>();
     public static void main(String[] args) {
 //        System.out.println(getNthFibonacci(0,1,7,1));
-//        System.out.println(fibonacci(100));
+//        System.out.println(fibonacci(5));
 
-        System.out.println(fibonacciMemo(10));
+//        System.out.println(fibonacciMemo(10));
+
     }
 
     public static long getNthFibonacci(long n1, long n2, int nth,int current){

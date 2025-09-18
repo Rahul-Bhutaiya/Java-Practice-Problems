@@ -57,7 +57,7 @@ public class Practice1 {
 
 //        in following examples we are using comparable
 //        arl.sort(null); // arl.sort() method calls Collection.sort method behind the scenes
-//        Collections.sort(arl);
+        Collections.sort(arl);
 
 //        System.out.println();
 //        for(Student student:arl){

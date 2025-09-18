@@ -17,3 +17,4 @@ public class CheckTheArrayContainsTheGivenDuplicateNumberOrNot {
         System.out.println("Not Duplicate");
     }
 }
+//done

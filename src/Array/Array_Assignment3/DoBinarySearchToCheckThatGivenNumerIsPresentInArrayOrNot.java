@@ -21,3 +21,4 @@ public class DoBinarySearchToCheckThatGivenNumerIsPresentInArrayOrNot {
         System.out.println("Not Present");
     }
 }
+//done

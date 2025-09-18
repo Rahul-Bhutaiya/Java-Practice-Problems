@@ -10,3 +10,4 @@ public class SumOfArrayElements {
         System.out.println("sum = "+sum);
     }
 }
+//done

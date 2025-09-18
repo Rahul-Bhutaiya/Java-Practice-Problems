@@ -21,3 +21,4 @@ public class CreateCountOfArrayToFindThatHowManyNumbersSmallerThanCurrentNumberI
         System.out.println(Arrays.toString(countArray));
     }
 }
+//done

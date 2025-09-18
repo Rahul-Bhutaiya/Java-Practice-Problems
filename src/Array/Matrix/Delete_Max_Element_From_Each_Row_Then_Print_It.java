@@ -23,6 +23,7 @@ public class Delete_Max_Element_From_Each_Row_Then_Print_It {
             }
             System.out.println();
         }
-        column--;
+//        column--;
     }
 }
+//done
